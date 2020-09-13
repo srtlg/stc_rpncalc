@@ -91,7 +91,7 @@ The keys on the *original* calculator map as follows:
 	- acts as acos(x) when shifted down
 - `3    `: acts as tan(x) when shifted
 	- acts as atan(x) when shifted down
-- all trig functions are currently calculated in degrees
+- all trig functions are calculated in radians
 - `-    `: acts as to radians when shifted
 	- acts as to degrees when shifted down
 - `+    `: acts as LastX when shifted
