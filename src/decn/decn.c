@@ -125,13 +125,12 @@ void st_load_decn(dec80 * const dst)
 
 void copy_decn(dec80* const dest, const dec80* const src){
 	uint8_t i;
+	char *dest_ptr = (char *)dest;
+	const char *src_ptr = (const char *)src;
 
 	stack_debug(0x01);
-	dest->exponent = src->exponent;
-
-	//copy nibbles
-	for (i = 0; i < DEC80_NUM_LSU; i++){
-		dest->lsu[i] = src->lsu[i];
+	for (i = 0; i < sizeof *dest; i++) {
+		dest_ptr[i] = src_ptr[i];
 	}
 }
 
